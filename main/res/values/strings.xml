@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AgenciaViajes</string>
+    
+    <array name="destinos">
+        <item>Escuinapa</item>
+        <item>Guasava</item>
+        <item>Guamuchil</item>
+        <item>Sinaloa de Leyva</item>
+        <item>Culiacan</item>
+        <item>Los Mochis</item>
+    </array>
+
+    <array name="tipos">
+        <item>Redondo</item>
+        <item>Sencillo</item>
+    </array>
+</resources>
