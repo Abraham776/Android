@@ -111,4 +111,11 @@ public class Boleto {
         this.precio = precio;
     }
 
+    public String getFechaRegreso() {
+        return fechaRegreso;
+    }
+
+    public void setFechaRegreso(String fechaRegreso) {
+        this.fechaRegreso = fechaRegreso;
+    }
 }

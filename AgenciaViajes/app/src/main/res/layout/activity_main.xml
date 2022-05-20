@@ -6,121 +6,355 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_height="match_parent"
+    <ScrollView
+        android:id="@+id/vistaPrincipal"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        >
+        android:visibility="visible">
 
-        <TextView
-            android:id="@+id/lblNombre"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Ingrese su nombre"
-            android:textSize="20dp"
-            />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/txtNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            />
+            <TextView
+                android:id="@+id/lblNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ingrese su nombre"
+                android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/lblPrecio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Ingrese el precio de su boleto"
-            android:textSize="20dp"
-            />
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/txtPrecio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            />
+            <TextView
+                android:id="@+id/lblEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ingrese su edad"
+                android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/lblTipoViaje"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Indique su tipo de viaje"
-            android:textSize="20dp"
-            />
+            <EditText
+                android:id="@+id/txtEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spnTipo"
-            />
+            <TextView
+                android:id="@+id/lblPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ingrese el precio de su boleto"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lblDestino"
-            android:text="Indique su destino"
-            android:textSize="20dp"
-            android:gravity="center"/>
+            <EditText
+                android:id="@+id/txtPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spnDestinos"
-            />
+            <TextView
+                android:id="@+id/lblTipoViaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Indique su tipo de viaje"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lblFechaPartida"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:text="Ingrese su fecha de partida"/>
+            <Spinner
+                android:id="@+id/spnTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/datePartida"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:focusable="false"
-            android:clickable="true"
-            android:maxLines="1"
-            android:hint="Click aquí!"/>
+            <TextView
+                android:id="@+id/lblDestino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Indique su destino"
+                android:textSize="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lblFechaRegreso"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:text="Ingrese su fecha de regreso"
-            android:visibility="gone"
-            />
+            <Spinner
+                android:id="@+id/spnDestinos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/dateRegreso"
-            android:layout_width="match_parent"
-            android:hint="Click aquí!"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:focusable="false"
-            android:clickable="true"
-            android:maxLines="1"
-            android:visibility="gone"/>
+            <TextView
+                android:id="@+id/lblFechaPartida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ingrese su fecha de partida"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/datePartida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Click aquí!"
+                android:inputType="date"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/lblFechaRegreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ingrese su fecha de regreso"
+                android:textSize="20dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/dateRegreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Click aquí!"
+                android:inputType="date"
+                android:maxLines="1"
+                android:visibility="gone" />
 
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnConfirmar"
-            android:text="Confirmar Datos"
-            />
+            <Button
+                android:id="@+id/btnConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmar Datos" />
 
+        </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
+    <TableLayout
+        android:id="@+id/vistaSecundaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:isScrollContainer="true">
 
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblNumero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:text="No. Boleto"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtNumero"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+            <TextView
+                android:id="@+id/lblFechaPartidaBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Fecha partida"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtFechaPartidaBoleto"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC" android:visibility="gone" android:id="@+id/trFechaRegreso">
+            <TextView
+                android:id="@+id/lblFechaRegresoBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha regreso"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtFechaRegresoBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblNombreBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Nombre Cliente"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtNombreBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblDestinoBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Destino"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtDestinoBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblTipoViajeBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Tipo viaje"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtTipoViaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblPrecioBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Precio"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtPrecioBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#0079D6">
+
+            <TextView
+                android:id="@+id/lblImporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Importe"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblSubtotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Subtotal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtSubtotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblImpuesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Impuesto (16%)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtImpuesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblDescuento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Descuento"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtDescuento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow android:background="#DAE8FC">
+
+            <TextView
+                android:id="@+id/lblTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Total a pagar"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:focusable="false"
+                android:textSize="15sp" />
+        </TableRow>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
