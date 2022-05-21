@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CotizacionAutomovil</string>
+
+    <string-array name="plazos">
+        <item>60 meses</item>
+        <item>90 meses</item>
+        <item>120 meses</item>
+    </string-array>
+</resources>

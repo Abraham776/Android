@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow android:background="#195EB1">
+                <TextView
+                    android:text="Numero de cotizacion"/>
+
+                <TextView
+                    android:id="@+id/txtNumero"/>
+            </TableRow>
+
+            <TableRow android:background="#195EB1">
+                <TextView
+                    android:text="Descripcion"/>
+
+                <TextView
+                    android:id="@+id/txtDescripcion"/>
+            </TableRow>
+
+            <TableRow android:background="#195EB1">
+                <TextView
+                    android:text="Precio"/>
+
+                <TextView
+                    android:id="@+id/txtPrecio"/>
+            </TableRow>
+
+            <TableRow android:background="#195EB1">
+                <TextView
+                    android:text="Porcentaje pago inicial" />
+
+                <TextView
+                    android:id="@+id/txtPorcentaje"/>
+            </TableRow>
+
+            <TableRow android:background="#195EB1">
+                <TextView
+                    android:text="Plazo"/>
+
+                <TextView
+                    android:id="@+id/txtPlazo"/>
+            </TableRow>
+
+            <TableRow android:background="#124480">
+                <TextView
+                    android:text="Pagos"/>
+            </TableRow>
+
+            <TableRow android:background="#195EB1">
+                <TextView
+                    android:text="Pago inicial"/>
+
+                <TextView
+                    android:id="@+id/txtPagoInicial"/>
+            </TableRow>
+
+            <TableRow android:background="#195EB1">
+                <TextView
+                    android:text="Total a fin"/>
+
+                <TextView
+                    android:id="@+id/txtTotal"/>
+            </TableRow>
+
+            <TableRow android:background="#195EB1">
+                <TextView
+                    android:text="Pago mensual"/>
+
+                <TextView
+                    android:id="@+id/txtPagoMensual"/>
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/btnRegresar"
+                    android:text="Regresar"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
