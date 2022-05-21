@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             txtDestinoBoleto, txtTipoViaje, txtPrecioBoleto, txtSubtotal, txtImpuesto, txtDescuento,
             txtTotal;
     private TextView lblFechaRegresoBoleto;
+    private Button btnRegresar;
     private TableRow trFechaRegreso;
 
     @Override
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         txtTotal = findViewById(R.id.txtTotal);
         lblFechaRegresoBoleto = findViewById(R.id.lblFechaRegresoBoleto);
         trFechaRegreso = findViewById(R.id.trFechaRegreso);
+        btnRegresar = findViewById(R.id.btnRegresar);
 
         //Spinner selecter
         ArrayAdapter<String> adapterDestinos = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_expandable_list_item_1,
@@ -170,6 +172,15 @@ public class MainActivity extends AppCompatActivity {
                 txtTotal.setText(String.format("%.2f", boleto.calcularTotal(Integer.parseInt(txtEdad.getText().toString()))));
 
 
+            }
+        });
+
+        //Botón regresar
+        btnRegresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vistaPrincipal.setVisibility(View.VISIBLE);
+                vistaSecundaria.setVisibility(View.GONE);
             }
         });
     }

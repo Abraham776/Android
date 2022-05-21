@@ -356,5 +356,12 @@
                 android:focusable="false"
                 android:textSize="15sp" />
         </TableRow>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btnRegresar"
+            android:text="Regresar" />
+
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
