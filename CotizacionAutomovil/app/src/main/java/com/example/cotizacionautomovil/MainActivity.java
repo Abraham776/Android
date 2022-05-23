@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         spnPlazo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                plazo = parent.getItemAtPosition(position).toString();
+                plazo = parent.getItemAtPosition(position).toString().replace(" meses", "");
             }
 
             @Override
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
+                cotizacion = new Cotizacion(1, Integer.parseInt(plazo), txtDescripcion.getText().toString(), Float.parseFloat(txtPrecio.getText().toString()), Float.parseFloat(txtPorcentajePago.getText().toString()));
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 intent.putExtra("cotizacion", cotizacion);
                 startActivity(intent);

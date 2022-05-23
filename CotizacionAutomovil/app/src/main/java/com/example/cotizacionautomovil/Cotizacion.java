@@ -15,7 +15,11 @@ public class Cotizacion implements Serializable {
         this.plazo = plazo;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.porcentaje_pago = porcentaje_pago;
+        if(porcentaje_pago >= 1) {
+            this.porcentaje_pago = porcentaje_pago/100;
+        } else {
+            this.porcentaje_pago = porcentaje_pago;
+        }
     }
 
     public Cotizacion(Cotizacion cotizacion) {
