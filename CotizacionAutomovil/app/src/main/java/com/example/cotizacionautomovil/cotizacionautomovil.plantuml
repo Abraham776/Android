@@ -1,0 +1,69 @@
+@startuml
+
+title __COTIZACIONAUTOMOVIL's Class Diagram__\n
+
+  namespace com.example.cotizacionautomovil {
+    class com.example.cotizacionautomovil.Cotizacion {
+        - descripcion : String
+        - id : int
+        - plazo : int
+        - porcentaje_pago : float
+        - precio : float
+        + Cotizacion()
+        + Cotizacion()
+        + Cotizacion()
+        + calcularMensualidad()
+        + calcularPagoInicial()
+        + calcularTotal()
+        + getDescripcion()
+        + getId()
+        + getPlazo()
+        + getPorcentaje_pago()
+        + getPrecio()
+        + imprimirCotizacion()
+        + setDescripcion()
+        + setId()
+        + setPlazo()
+        + setPorcentaje_pago()
+        + setPrecio()
+    }
+  }
+  
+
+  namespace com.example.cotizacionautomovil {
+    class com.example.cotizacionautomovil.MainActivity {
+        - btnConfirmar : Button
+        - plazo : String
+        - spnPlazo : Spinner
+        - txtDescripcion : EditText
+        - txtPorcentajePago : EditText
+        - txtPrecio : EditText
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.cotizacionautomovil {
+    class com.example.cotizacionautomovil.MainActivity2 {
+        - btnRegresar : Button
+        - oldIntent : Intent
+        - txtDescripcion : TextView
+        - txtNumero : TextView
+        - txtPagoInicial : TextView
+        - txtPagoMensual : TextView
+        - txtPlazo : TextView
+        - txtPorcentaje : TextView
+        - txtPrecio : TextView
+        - txtTotal : TextView
+        # onCreate()
+    }
+  }
+  
+
+  com.example.cotizacionautomovil.Cotizacion .up.|> java.io.Serializable
+  com.example.cotizacionautomovil.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cotizacionautomovil.MainActivity o-- com.example.cotizacionautomovil.Cotizacion : cotizacion
+  com.example.cotizacionautomovil.MainActivity2 -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cotizacionautomovil.MainActivity2 o-- com.example.cotizacionautomovil.Cotizacion : cotizacion
+
+@enduml
