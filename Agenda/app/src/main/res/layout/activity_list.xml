@@ -6,10 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ListActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="Ingrese nombre"
+            app:iconifiedByDefault="false"
+            android:layout_margin="2dp"
+            android:id="@+id/searchBar"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -17,6 +26,7 @@
             android:id="@+id/lblUsuario"
             android:text="::">
         </TextView>
+
 
         <ListView
             android:layout_width="match_parent"
