@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Calculos del Rectangulo"
+           android:textAlignment="center"
+           android:textSize="35dp"
+           android:textStyle="bold"/>
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/txtNombre"
+           android:inputType="textPersonName"
+           android:hint="Escribe aquí tu Nombre"/>
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/txtBase"
+           android:inputType="numberDecimal"
+           android:hint="Escribe la base del rectángulo"
+           android:maxLength="4"/>
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/txtAltura"
+           android:inputType="numberDecimal"
+           android:maxLength="4"
+           android:hint="Escriba aquí la altura del rectangulo"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLimpiar"
+                android:text="Limpiar"/>
+           <Button
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/btnSiguiente"
+               android:text="Siguiente"/>
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+               android:layout_height="wrap_content"
+                android:id="@+id/btnSalir"
+                android:text="Salir"/>
+       </LinearLayout>
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
