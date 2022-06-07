@@ -15,7 +15,7 @@ public class RectanguloActivity extends AppCompatActivity {
     private Button btnCalcular, btnRegresar;
     private Intent oldIntent;
     private Rectangulo rectangulo = new Rectangulo();
-    private String calcular;
+    private String calcular = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
