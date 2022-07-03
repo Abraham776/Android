@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:paddingLeft="14dp"
                 android:paddingRight="14dp"
-                app:srcCompat="@drawable/a0"/>
+                app:srcCompat="@drawable/a01"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -52,14 +52,14 @@
                     android:layout_marginBottom="2dp"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:text="SANS THE SKELETON FROM PERSONA 6"/>
+                    android:text="Carolina Herrera Gomez"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtCarrera"
                     android:layout_marginBottom="2dp"
-                    android:text="Ing. en Humor Local"
+                    android:text="Ing. en Tecnologías de la Información"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"/>

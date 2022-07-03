@@ -5,7 +5,7 @@ public class Alumno {
     private String carrera, nombre, matricula;
     private int img;
 
-    public Alumno(String carrera, String nombre, String matricula, int img) {
+    public Alumno(String carrera, String nombre, int img, String matricula) {
         this.carrera = carrera;
         this.nombre = nombre;
         this.matricula = matricula;
@@ -51,13 +51,16 @@ public class Alumno {
         ArrayList<Alumno> alumnos = new ArrayList<>();
         String carrera = "Ing. Tec. Informacion";
 
-        alumnos.add(new Alumno(carrera, "JOKER FROM SUPER SMASH BROS ULTIMATE", "2019030365", R.drawable.a0));
-        alumnos.add(new Alumno(carrera, "José Abraham Sánchez Plazola", "2019000000", R.drawable.a1));
-        alumnos.add(new Alumno(carrera, "NESS FROM UNDERTALE", "20190303687", R.drawable.a2));
-        alumnos.add(new Alumno(carrera, "El RM", "2004000001", R.drawable.a3));
-        alumnos.add(new Alumno(carrera, "Diego Preciado Rodriguez", "2019489712", R.drawable.a4));
-        alumnos.add(new Alumno(carrera, "SUPER SMASH BROS x DEAD OR ALIVE 5", "202400001", R.drawable.a5));
-
+        alumnos.add(new Alumno(carrera, "GOMEZ CAMARENA JOSE RICARDO", R.drawable.a01,"2017030274"));
+        alumnos.add(new Alumno(carrera, "PEÑA SOLIS DIEGO ARMANDO", R.drawable.a02,"2017030432"));
+        alumnos.add(new Alumno(carrera, "GARCIA SILVA ADRIAN", R.drawable.a03,"2018030098"));
+        alumnos.add(new Alumno(carrera, "GARCIA RODRIGUEZ JESUS EFRAIN", R.drawable.a04,"2018030099"));
+        alumnos.add(new Alumno(carrera, "LIZARRAGA CAMACHO JESUS ARMANDO", R.drawable.a05,"2018030103"));
+        alumnos.add(new Alumno(carrera, "GARCIA GOMEZ JUAN ANTONIO", R.drawable.a06,"2018030108"));
+        alumnos.add(new Alumno(carrera, "LIZARRAGA LUNA JUAN FRANCISCO", R.drawable.a07,"2018030119"));
+        alumnos.add(new Alumno(carrera, "OSUNA HIGUERA ALEJANDRO", R.drawable.a08,"2018030121"));
+        alumnos.add(new Alumno(carrera, "MARIN GALINDO KIMBERLY VANESSA", R.drawable.a10,"2018030133"));
+        alumnos.add(new Alumno(carrera, "PERAZA SAINZ ANGEL ADRIAN", R.drawable.a09,"2018030155"));
         return alumnos;
     }
 }
