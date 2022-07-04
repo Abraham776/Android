@@ -5,6 +5,16 @@ public class Alumno {
     private String carrera, nombre, matricula;
     private int img;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
+
     public Alumno(String carrera, String nombre, int img, String matricula) {
         this.carrera = carrera;
         this.nombre = nombre;
