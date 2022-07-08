@@ -1,9 +1,11 @@
 package com.example.recycleview;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Alumno {
+public class Alumno implements Serializable {
     private String carrera, nombre, matricula;
-    private int img;
+    private int id;
+    private Integer img;
 
     public int getId() {
         return id;
@@ -13,9 +15,7 @@ public class Alumno {
         this.id = id;
     }
 
-    private int id;
-
-    public Alumno(String carrera, String nombre, int img, String matricula) {
+    public Alumno(String carrera, String nombre, Integer img, String matricula) {
         this.carrera = carrera;
         this.nombre = nombre;
         this.matricula = matricula;
@@ -49,11 +49,11 @@ public class Alumno {
         this.matricula = matricula;
     }
 
-    public int getImg() {
+    public Integer getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(Integer img) {
         this.img = img;
     }
 

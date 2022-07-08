@@ -6,7 +6,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 public class Aplicacion extends Application {
-    private ArrayList<Alumno> alumnos;
+    private static ArrayList<Alumno> alumnos;
     private MiAdaptador adaptador;
 
     @Override
@@ -17,7 +17,7 @@ public class Aplicacion extends Application {
         Log.d("", "onCreate: tamaño array list " + alumnos.size());
     }
 
-    public ArrayList<Alumno> getAlumnos() {
+    public static ArrayList<Alumno> getAlumnos() {
         return alumnos;
     }
 
