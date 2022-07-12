@@ -1,13 +1,13 @@
 package com.example.recycleview;
 import android.net.Uri;
 
+import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Alumno implements Serializable {
     private String carrera, nombre, matricula;
     private int id;
-    private Integer img;
     private String imgURI;
 
     public int getId() {
@@ -74,6 +74,7 @@ public class Alumno implements Serializable {
         alumnos.add(new Alumno(carrera, "OSUNA HIGUERA ALEJANDRO", "android.resource://com.example.recycleview/" + R.drawable.a08,"2018030121"));
         alumnos.add(new Alumno(carrera, "MARIN GALINDO KIMBERLY VANESSA", "android.resource://com.example.recycleview/" + R.drawable.a09,"2018030133"));
         alumnos.add(new Alumno(carrera, "PERAZA SAINZ ANGEL ADRIAN", "android.resource://com.example.recycleview/" + R.drawable.a10,"2018030155"));
+
         return alumnos;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.recycleview;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,12 +15,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.File;
+
 public class AlumnoAlta extends AppCompatActivity {
     private Button btnGuardar, btnRegresar, btnImagen;
     private Alumno alumno;
     private EditText txtNombre, txtMatricula, txtGrado;
     private ImageView imgAlumno;
-    private String carrera;
     private int posicion;
     private Uri imgURI;
 
@@ -77,10 +79,12 @@ public class AlumnoAlta extends AppCompatActivity {
                     alumno.setMatricula(txtMatricula.getText().toString());
                     alumno.setNombre(txtNombre.getText().toString());
                     alumno.setCarrera(txtGrado.getText().toString());
+                    alumno.setImgURI(imgURI.toString());
 
                     Aplicacion.getAlumnos().get(posicion).setMatricula(alumno.getMatricula());
                     Aplicacion.getAlumnos().get(posicion).setNombre(alumno.getNombre());
                     Aplicacion.getAlumnos().get(posicion).setCarrera(alumno.getCarrera());
+                    Aplicacion.getAlumnos().get(posicion).setImgURI(alumno.getImgURI());
 
                     Toast.makeText(AlumnoAlta.this, "Se modificó con exito", Toast.LENGTH_SHORT).show();
                 }
@@ -99,10 +103,8 @@ public class AlumnoAlta extends AppCompatActivity {
     private void imageChooser() {
         Intent i = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         i.setType("image/*");
-       // i.setAction(Intent.ACTION_OPEN_DOCUMENT);
 
         startActivityForResult(Intent.createChooser(i, "Seleccione una imagen"), 200);
-
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -119,6 +121,10 @@ public class AlumnoAlta extends AppCompatActivity {
                     // update the preview image in the layout
                     imgAlumno.setImageURI(selectedImageUri);
                     imgURI = selectedImageUri;
+
+                    ContentResolver cr = getApplicationContext().getContentResolver();
+                    cr.takePersistableUriPermission(imgURI, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
                 }
             }
         }

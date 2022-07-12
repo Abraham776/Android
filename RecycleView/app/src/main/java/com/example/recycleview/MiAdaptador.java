@@ -47,7 +47,10 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.ViewHolder> im
         holder.txtMatricula.setText(alumno.getMatricula());
         holder.txtNombre.setText(alumno.getNombre());
         holder.txtCarrera.setText(alumno.getCarrera());
-        holder.idImagen.setImageURI(Uri.parse(alumno.getImgURI()));
+
+        Uri imgUri = Uri.parse(alumno.getImgURI());
+
+        holder.idImagen.setImageURI(imgUri);
     }
 
     @Override

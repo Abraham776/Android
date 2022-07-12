@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtras(bundle);
 
                 startActivityForResult(intent, 0);
-
             }
         });
     }
