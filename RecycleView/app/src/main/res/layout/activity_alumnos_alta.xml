@@ -22,10 +22,17 @@
             android:id="@+id/txtNombre"
             android:hint="Ingrese su nombre completo"/>
         <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/personaadd"
+            android:id="@+id/imgAlumno"
+            android:layout_gravity="center"/>
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/personaadd"
-            android:id="@+id/imgAlumno"/>
+            android:text="Cargar Imagen"
+            android:id="@+id/btnCargar"
+            android:layout_span="2"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,6 +60,12 @@
             </TableRow>
 
         </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:id="@+id/txtURL"/>
 
     </LinearLayout>
 

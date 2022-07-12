@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -38,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 posicion = recyclerView.getChildAdapterPosition(v);
                 alumno = app.getAlumnos().get(posicion);
 
-                Intent intent = new Intent(MainActivity.this, AlumnoAlta.class);
+                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                intent.setClass(MainActivity.this, AlumnoAlta.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("alumno", alumno);
                 intent.putExtra("posicion", posicion);
@@ -51,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 alumno = null;
-                Intent intent = new Intent(MainActivity.this, AlumnoAlta.class);
+                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
                 Bundle bundle = new Bundle();
+                intent.setClass(MainActivity.this, AlumnoAlta.class);
                 bundle.putSerializable("alumno", alumno);
                 bundle.putInt("posicion", posicion);
                 intent.putExtras(bundle);

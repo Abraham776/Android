@@ -1,6 +1,8 @@
 package com.example.recycleview;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,12 +15,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AlumnoAlta extends AppCompatActivity {
-    private Button btnGuardar, btnRegresar;
+    private Button btnGuardar, btnRegresar, btnImagen;
     private Alumno alumno;
     private EditText txtNombre, txtMatricula, txtGrado;
     private ImageView imgAlumno;
-    private String carrera = "Ing. Tec Información";
+    private String carrera;
     private int posicion;
+    private Uri imgURI;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -26,6 +29,7 @@ public class AlumnoAlta extends AppCompatActivity {
         setContentView(R.layout.activity_alumnos_alta);
         btnGuardar = (Button) findViewById(R.id.btnSalir);
         btnRegresar = (Button) findViewById(R.id.btnRegresar);
+        btnImagen = (Button) findViewById(R.id.btnCargar);
         txtGrado = findViewById(R.id.txtGrado);
         txtMatricula = findViewById(R.id.txtMatricula);
         txtNombre = findViewById(R.id.txtNombre);
@@ -39,18 +43,25 @@ public class AlumnoAlta extends AppCompatActivity {
             txtMatricula.setText(alumno.getMatricula());
             txtNombre.setText(alumno.getNombre());
             txtGrado.setText(alumno.getCarrera());
-            imgAlumno.setImageResource(alumno.getImg());
+            imgAlumno.setImageURI(Uri.parse(alumno.getImgURI()));
         }
+
+        btnImagen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageChooser();
+            }
+        });
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(alumno == null){
                     alumno = new Alumno();
-                    alumno.setCarrera(carrera);
+                    alumno.setCarrera(txtGrado.getText().toString());
                     alumno.setMatricula(txtMatricula.getText().toString());
                     alumno.setNombre(txtNombre.getText().toString());
-                    alumno.setImg(R.drawable.personaadd);
+                    alumno.setImgURI(imgURI.toString());
 
                     if(validar()){
                         Aplicacion.getAlumnos().add(alumno);
@@ -85,6 +96,33 @@ public class AlumnoAlta extends AppCompatActivity {
         });
     }
 
+    private void imageChooser() {
+        Intent i = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        i.setType("image/*");
+       // i.setAction(Intent.ACTION_OPEN_DOCUMENT);
+
+        startActivityForResult(Intent.createChooser(i, "Seleccione una imagen"), 200);
+
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+
+            // compare the resultCode with the
+            // SELECT_PICTURE constant
+            if (requestCode == 200) {
+                // Get the url of the image from data
+                Uri selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    // update the preview image in the layout
+                    imgAlumno.setImageURI(selectedImageUri);
+                    imgURI = selectedImageUri;
+                }
+            }
+        }
+    }
 
     private boolean validar(){
         boolean exito = true;

@@ -39,7 +39,7 @@ public class AlumnosDb implements Persistencia,Proyeccion {
         values.put(DefineTabla.Alumnos.COLUMN_NAME_MATRICULA,alumno.getMatricula());
         values.put(DefineTabla.Alumnos.COLUMN_NAME_NOMBRE,alumno.getNombre());
         values.put(DefineTabla.Alumnos.COLUMN_NAME_CARRERA,alumno.getCarrera());
-        values.put(DefineTabla.Alumnos.COLUMN_NAME_FOTO,alumno.getImg());
+        //values.put(DefineTabla.Alumnos.COLUMN_NAME_FOTO,alumno.getImg());
         this.openDataBase();
         long num= db.insert(DefineTabla.Alumnos.TABLE_NAME,null,values);
         this.closeDataBase();
@@ -56,7 +56,7 @@ public class AlumnosDb implements Persistencia,Proyeccion {
         values.put(DefineTabla.Alumnos.COLUMN_NAME_NOMBRE,alumno.getNombre());
 
         values.put(DefineTabla.Alumnos.COLUMN_NAME_CARRERA,alumno.getCarrera());
-        values.put(DefineTabla.Alumnos.COLUMN_NAME_FOTO,alumno.getImg());
+        //values.put(DefineTabla.Alumnos.COLUMN_NAME_FOTO,alumno.getImg());
         this.openDataBase();
         long num = db.update(DefineTabla.Alumnos.TABLE_NAME,
                 values,
