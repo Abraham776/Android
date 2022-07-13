@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import modelo.AlumnoDbHelper;
+import modelo.AlumnosDb;
+
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         fabNuevo = findViewById(R.id.agregarAlumno);
 
         Aplicacion app = (Aplicacion) getApplication();
+
         recyclerView = findViewById(R.id.recId);
         recyclerView.setAdapter(app.getAdaptador());
 
@@ -63,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent intent){

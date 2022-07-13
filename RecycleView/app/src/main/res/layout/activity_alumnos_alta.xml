@@ -54,12 +54,20 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Regresar"
-                    android:id="@+id/btnRegresar"
+                    android:text="Borrar"
+                    android:id="@+id/btnBorrar"
                     android:layout_span="2"/>
+
             </TableRow>
 
         </TableLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:id="@+id/btnRegresar"
+            android:layout_span="2"/>
 
         <TextView
             android:layout_width="match_parent"

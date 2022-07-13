@@ -1,7 +1,9 @@
 package com.example.recycleview;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,13 +19,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 
+import modelo.AlumnoDbHelper;
+import modelo.AlumnosDb;
+
 public class AlumnoAlta extends AppCompatActivity {
-    private Button btnGuardar, btnRegresar, btnImagen;
+    private Button btnGuardar, btnRegresar, btnImagen, btnBorrar;
     private Alumno alumno;
     private EditText txtNombre, txtMatricula, txtGrado;
     private ImageView imgAlumno;
     private int posicion;
     private Uri imgURI;
+    private AlumnoDbHelper dbHelper = new AlumnoDbHelper(this);
+    private AlumnosDb db = new AlumnosDb(this, dbHelper);
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -36,6 +43,7 @@ public class AlumnoAlta extends AppCompatActivity {
         txtMatricula = findViewById(R.id.txtMatricula);
         txtNombre = findViewById(R.id.txtNombre);
         imgAlumno = findViewById(R.id.imgAlumno);
+        btnBorrar = findViewById(R.id.btnBorrar);
 
         Bundle bundle = getIntent().getExtras();
         alumno = (Alumno) bundle.getSerializable("alumno");
@@ -67,6 +75,9 @@ public class AlumnoAlta extends AppCompatActivity {
 
                     if(validar()){
                         Aplicacion.getAlumnos().add(alumno);
+                        db.openDataBase();
+                        db.insertAlumno(alumno);
+                        db.closeDataBase();
                         setResult(Activity.RESULT_OK);
                         finish();
                     } else {
@@ -85,8 +96,40 @@ public class AlumnoAlta extends AppCompatActivity {
                     Aplicacion.getAlumnos().get(posicion).setNombre(alumno.getNombre());
                     Aplicacion.getAlumnos().get(posicion).setCarrera(alumno.getCarrera());
                     Aplicacion.getAlumnos().get(posicion).setImgURI(alumno.getImgURI());
+                    db.openDataBase();
+                    db.updateAlumno(alumno);
+                    db.closeDataBase();
 
                     Toast.makeText(AlumnoAlta.this, "Se modificó con exito", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            }
+        });
+
+        btnBorrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(posicion >= 0){
+                    new AlertDialog.Builder(AlumnoAlta.this)
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setTitle("Borrand registro")
+                            .setMessage("¿Está seguro que desea borrar este registro?")
+                            .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Aplicacion.getAlumnos().remove(posicion);
+                                    db.openDataBase();
+                                    db.deleteAlumno(alumno.getId());
+                                    db.closeDataBase();
+
+                                    Toast.makeText(AlumnoAlta.this, "Se borró con exito", Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }
+                            })
+                            .setNegativeButton("No", null)
+                            .show();
+                } else {
+                    Toast.makeText(AlumnoAlta.this, "No existe", Toast.LENGTH_SHORT).show();
                 }
             }
         });

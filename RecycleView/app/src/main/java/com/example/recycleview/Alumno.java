@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import modelo.AlumnoDbHelper;
+import modelo.AlumnosDb;
+
 public class Alumno implements Serializable {
     private String carrera, nombre, matricula;
     private int id;
@@ -61,7 +64,8 @@ public class Alumno implements Serializable {
     }
 
     public static ArrayList<Alumno> llenarAlumnos(){
-        ArrayList<Alumno> alumnos = new ArrayList<>();
+        ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
+
         String carrera = "Ing. Tec. Informacion";
 
         alumnos.add(new Alumno(carrera, "GOMEZ CAMARENA JOSE RICARDO","android.resource://com.example.recycleview/" + R.drawable.a01,"2017030274"));
@@ -76,5 +80,6 @@ public class Alumno implements Serializable {
         alumnos.add(new Alumno(carrera, "PERAZA SAINZ ANGEL ADRIAN", "android.resource://com.example.recycleview/" + R.drawable.a10,"2018030155"));
 
         return alumnos;
+
     }
 }
