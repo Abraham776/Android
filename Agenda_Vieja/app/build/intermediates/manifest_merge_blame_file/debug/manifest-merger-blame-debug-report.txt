@@ -1,0 +1,136 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.agenda"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml
+10
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:25:5-79
+13-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:25:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:26:5-67
+14-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:26:22-64
+15
+16    <application
+16-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:6:5-28:19
+17        android:allowBackup="true"
+17-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:7:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.7.0] C:\Users\Abraham\.gradle\caches\transforms-3\5743ff164d31f28923d066ea4e0a4874\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+19        android:dataExtractionRules="@xml/data_extraction_rules"
+19-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:8:9-65
+20        android:debuggable="true"
+21        android:fullBackupContent="@xml/backup_rules"
+21-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:9:9-54
+22        android:icon="@mipmap/ic_launcher"
+22-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:10:9-43
+23        android:label="@string/app_name"
+23-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:11:9-41
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:12:9-54
+25        android:supportsRtl="true"
+25-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:13:9-35
+26        android:testOnly="true"
+27        android:theme="@style/Theme.Agenda" >
+27-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:14:9-44
+28        <activity
+28-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:16:9-18:40
+29            android:name="com.example.agenda.ListaActivity"
+29-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:17:13-42
+30            android:exported="false" />
+30-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:18:13-37
+31        <activity
+31-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:19:9-27:20
+32            android:name="com.example.agenda.MainActivity"
+32-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:20:13-41
+33            android:exported="true" >
+33-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:21:13-36
+34            <intent-filter>
+34-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:22:13-26:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:23:17-69
+35-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:23:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:25:17-77
+37-->C:\Users\Abraham\AndroidStudioProjects\Agenda\app\src\main\AndroidManifest.xml:25:27-74
+38            </intent-filter>
+39        </activity>
+40
+41        <service
+41-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:29:9-35:19
+42            android:name="com.google.firebase.components.ComponentDiscoveryService"
+42-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:30:13-84
+43            android:directBootAware="true"
+43-->[com.google.firebase:firebase-common:20.1.1] C:\Users\Abraham\.gradle\caches\transforms-3\cd1693d3ed1cdfc22937ba7cdd967b81\transformed\firebase-common-20.1.1\AndroidManifest.xml:35:13-43
+44            android:exported="false" >
+44-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:31:13-37
+45            <meta-data
+45-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:32:13-34:85
+46                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+46-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:33:17-109
+47                android:value="com.google.firebase.components.ComponentRegistrar" />
+47-->[com.google.firebase:firebase-database:20.0.5] C:\Users\Abraham\.gradle\caches\transforms-3\21b539a68a02d0d029ab507a38c9eff3\transformed\firebase-database-20.0.5\AndroidManifest.xml:34:17-82
+48        </service>
+49
+50        <provider
+50-->[com.google.firebase:firebase-common:20.1.1] C:\Users\Abraham\.gradle\caches\transforms-3\cd1693d3ed1cdfc22937ba7cdd967b81\transformed\firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
+51            android:name="com.google.firebase.provider.FirebaseInitProvider"
+51-->[com.google.firebase:firebase-common:20.1.1] C:\Users\Abraham\.gradle\caches\transforms-3\cd1693d3ed1cdfc22937ba7cdd967b81\transformed\firebase-common-20.1.1\AndroidManifest.xml:27:13-77
+52            android:authorities="com.example.agenda.firebaseinitprovider"
+52-->[com.google.firebase:firebase-common:20.1.1] C:\Users\Abraham\.gradle\caches\transforms-3\cd1693d3ed1cdfc22937ba7cdd967b81\transformed\firebase-common-20.1.1\AndroidManifest.xml:28:13-72
+53            android:directBootAware="true"
+53-->[com.google.firebase:firebase-common:20.1.1] C:\Users\Abraham\.gradle\caches\transforms-3\cd1693d3ed1cdfc22937ba7cdd967b81\transformed\firebase-common-20.1.1\AndroidManifest.xml:29:13-43
+54            android:exported="false"
+54-->[com.google.firebase:firebase-common:20.1.1] C:\Users\Abraham\.gradle\caches\transforms-3\cd1693d3ed1cdfc22937ba7cdd967b81\transformed\firebase-common-20.1.1\AndroidManifest.xml:30:13-37
+55            android:initOrder="100" />
+55-->[com.google.firebase:firebase-common:20.1.1] C:\Users\Abraham\.gradle\caches\transforms-3\cd1693d3ed1cdfc22937ba7cdd967b81\transformed\firebase-common-20.1.1\AndroidManifest.xml:31:13-36
+56
+57        <activity
+57-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Abraham\.gradle\caches\transforms-3\65ebf8feaa75971ce0cec3e5093cb428\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+58            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+58-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Abraham\.gradle\caches\transforms-3\65ebf8feaa75971ce0cec3e5093cb428\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+59            android:exported="false"
+59-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Abraham\.gradle\caches\transforms-3\65ebf8feaa75971ce0cec3e5093cb428\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+60            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+60-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Abraham\.gradle\caches\transforms-3\65ebf8feaa75971ce0cec3e5093cb428\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+61
+62        <meta-data
+62-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\c47a87221556743554a636d5601c1616\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+63            android:name="com.google.android.gms.version"
+63-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\c47a87221556743554a636d5601c1616\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+64            android:value="@integer/google_play_services_version" />
+64-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\c47a87221556743554a636d5601c1616\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+65
+66        <provider
+66-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\b37426ec211c3b7a010823316d8f3f80\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+67            android:name="androidx.startup.InitializationProvider"
+67-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\b37426ec211c3b7a010823316d8f3f80\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+68            android:authorities="com.example.agenda.androidx-startup"
+68-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\b37426ec211c3b7a010823316d8f3f80\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+69            android:exported="false" >
+69-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\b37426ec211c3b7a010823316d8f3f80\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+70            <meta-data
+70-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\b37426ec211c3b7a010823316d8f3f80\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+71                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+71-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\b37426ec211c3b7a010823316d8f3f80\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+72                android:value="androidx.startup" />
+72-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Abraham\.gradle\caches\transforms-3\b37426ec211c3b7a010823316d8f3f80\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+73            <meta-data
+73-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Abraham\.gradle\caches\transforms-3\d7ef137d3a7fc43e70ffa78fba83e146\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+74                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+74-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Abraham\.gradle\caches\transforms-3\d7ef137d3a7fc43e70ffa78fba83e146\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+75                android:value="androidx.startup" />
+75-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Abraham\.gradle\caches\transforms-3\d7ef137d3a7fc43e70ffa78fba83e146\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+76        </provider>
+77    </application>
+78
+79</manifest>

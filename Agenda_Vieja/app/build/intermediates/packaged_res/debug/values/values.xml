@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Agenda</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_limpiar">Limpiar</string>
+    <string name="btn_listar">Listar</string>
+    <string name="default_web_client_id" translatable="false">973547256089-6tca4f563m2qs5a7ie7lka4h6as1jokb.apps.googleusercontent.com</string>
+    <string name="direccion">Direccion *</string>
+    <string name="favorito">Marcar Favorito</string>
+    <string name="gcm_defaultSenderId" translatable="false">973547256089</string>
+    <string name="google_api_key" translatable="false">AIzaSyBUHjOJ-P2XbqH2ox-yQBbZt2rqOhrFFUI</string>
+    <string name="google_app_id" translatable="false">1:973547256089:android:88219382018516b1b4ad88</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBUHjOJ-P2XbqH2ox-yQBbZt2rqOhrFFUI</string>
+    <string name="google_storage_bucket" translatable="false">agenda-a7e47.appspot.com</string>
+    <string name="mensaje">Contacto Guardado!</string>
+    <string name="mensajeedit">Contacto Actualizado!</string>
+    <string name="mensajeerror">Favor de llenar todos los campos marcados con (*)</string>
+    <string name="nombre">Nombre *</string>
+    <string name="notas">Notas</string>
+    <string name="nuevo">Nuevo</string>
+    <string name="project_id" translatable="false">agenda-a7e47</string>
+    <string name="tel1">Telefono *</string>
+    <string name="tel2">Telefono Secundario</string>
+    <string name="texto">Elementos de la Agenda</string>
+    <style name="Theme.Agenda" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style>
+</resources>
