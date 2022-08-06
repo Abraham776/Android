@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">973547256089-6tca4f563m2qs5a7ie7lka4h6as1jokb.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">973547256089</string>
+    <string name="google_api_key" translatable="false">AIzaSyBUHjOJ-P2XbqH2ox-yQBbZt2rqOhrFFUI</string>
+    <string name="google_app_id" translatable="false">1:973547256089:android:88219382018516b1b4ad88</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBUHjOJ-P2XbqH2ox-yQBbZt2rqOhrFFUI</string>
+    <string name="google_storage_bucket" translatable="false">agenda-a7e47.appspot.com</string>
+    <string name="project_id" translatable="false">agenda-a7e47</string>
+</resources>
